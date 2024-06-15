@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Chat Application</title>
+</head>
+<body>
+    <!-- Chat Application -->
+    <section class="chat-app">
+        <div class="container">
+            <div class="chat-box">
+                <div class="chat" id="tom-chat">
+                    <header class="chat-header">
+                        <div class="logo">
+                            <i class='bx bx-user'></i>
+                            <span>Tom</span>
+                        </div>
+                    </header>
+                    <div class="messages" id="tom-messages"></div>
+                    <form class="message-form" id="tom-message-form">
+                        <input type="text" id="tom-message-input" placeholder="Type a message..." autocomplete="off">
+                        <button type="submit" class="btn primary">Send</button>
+                    </form>
+                </div>
+                <div class="chat" id="jerry-chat">
+                    <header class="chat-header">
+                        <div class="logo">
+                            <i class='bx bx-user'></i>
+                            <span>Jerry</span>
+                        </div>
+                    </header>
+                    <div class="messages" id="jerry-messages"></div>
+                    <form class="message-form" id="jerry-message-form">
+                        <input type="text" id="jerry-message-input" placeholder="Type a message..." autocomplete="off">
+                        <button type="submit" class="btn primary">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bgcolor: #faf9ff;
+    --white: #fff;
+    --jerryclr: #fc881c;
+    --primary: #1020cf;
+    --tomclr: #9e09fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.container {
+    max-width: 1280px;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgcolor);
+}
+
+.chat-box {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.chat {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .logo .bx {
+    font-size: 30px;
+    color: #81A0FE;
+}
+
+.chat-header .logo span {
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 900;
+    margin-left: 8px;
+}
+
+.messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    max-height: 400px; 
+}
+
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.message.tom .message-content {
+    color: var(--tomclr);
+    align-self: flex-start;
+}
+
+.message.jerry .message-content {
+    color: var(--jerryclr);
+    align-self: flex-end;
+}
+
+.message .username {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.message.jerry .username {
+    align-self: flex-end; /* Ensure the username is aligned to the left */
+    color: var(--jerryclr); /* Set the color for Jerry's username */
+}
+
+
+.message-form {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.message-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+    margin-right: 10px;
+}
+
+.btn {
+    border: 3px solid var(--primary);
+    color: var(--white);
+    border-radius: 20px;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn.primary {
+    background-color: var(--primary);
+}
+
+.btn.primary:hover {
+    background-color: transparent;
+    color: var(--primary);
+    transform: scale(1.1);
+}
